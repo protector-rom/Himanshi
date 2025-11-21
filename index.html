@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himanshi Bakshi - Biotechnology Researcher &amp; Scientist</title>
+    <style>
+        :root {
+            --color-white: rgba(255, 255, 255, 1);
+            --color-black: rgba(0, 0, 0, 1);
+            --color-cream-50: rgba(252, 252, 249, 1);
+            --color-cream-100: rgba(255, 255, 253, 1);
+            --color-gray-200: rgba(245, 245, 245, 1);
+            --color-gray-300: rgba(167, 169, 169, 1);
+            --color-gray-400: rgba(119, 124, 124, 1);
+            --color-slate-500: rgba(98, 108, 113, 1);
+            --color-brown-600: rgba(94, 82, 64, 1);
+            --color-charcoal-700: rgba(31, 33, 33, 1);
+            --color-charcoal-800: rgba(38, 40, 40, 1);
+            --color-slate-900: rgba(19, 52, 59, 1);
+            --color-teal-300: rgba(50, 184, 198, 1);
+            --color-teal-400: rgba(45, 166, 178, 1);
+            --color-teal-500: rgba(33, 128, 141, 1);
+            --color-teal-600: rgba(29, 116, 128, 1);
+            --color-teal-700: rgba(26, 104, 115, 1);
+            --color-brown-600-rgb: 94, 82, 64;
+            --color-teal-500-rgb: 33, 128, 141;
+            --color-slate-900-rgb: 19, 52, 59;
+            --color-background: var(--color-cream-50);
+            --color-surface: var(--color-cream-100);
+            --color-text: var(--color-slate-900);
+            --color-text-secondary: var(--color-slate-500);
+            --color-primary: var(--color-teal-500);
+            --color-primary-hover: var(--color-teal-600);
+            --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+            --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+            --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --space-8: 8px;
+            --space-12: 12px;
+            --space-16: 16px;
+            --space-20: 20px;
+            --space-24: 24px;
+            --space-32: 32px;
+            --space-48: 48px;
+            --radius-base: 8px;
+            --radius-lg: 12px;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-gray-400-rgb: 119, 124, 124;
+                --color-teal-300-rgb: 50, 184, 198;
+                --color-gray-300-rgb: 167, 169, 169;
+                --color-gray-200-rgb: 245, 245, 245;
+                --color-background: var(--color-charcoal-700);
+                --color-surface: var(--color-charcoal-800);
+                --color-text: var(--color-gray-200);
+                --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+                --color-primary: var(--color-teal-300);
+                --color-primary-hover: var(--color-teal-400);
+                --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+                --color-card-border: rgba(var(--color-gray-400-rgb), 0.2);
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family-base);
+            background: var(--color-background);
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-24);
+        }
+
+        /* Header */
+        header {
+            background: var(--color-surface);
+            border-bottom: 1px solid var(--color-card-border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-20) 0;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--color-text);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--space-32);
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-size: 15px;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: var(--space-16);
+            color: var(--color-text);
+        }
+
+        .hero .subtitle {
+            font-size: 20px;
+            color: var(--color-text-secondary);
+            margin-bottom: var(--space-24);
+        }
+
+        .hero .tagline {
+            font-size: 16px;
+            color: var(--color-text-secondary);
+            max-width: 700px;
+            margin: 0 auto var(--space-32);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: var(--space-16);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: var(--radius-base);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .btn-primary {
+            background: var(--color-primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--color-primary-hover);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-text);
+            border: 1px solid var(--color-border);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(var(--color-teal-500-rgb), 0.1);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: var(--space-32);
+            text-align: center;
+            color: var(--color-text);
+        }
+
+        /* About */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 16px;
+            color: var(--color-text-secondary);
+        }
+
+        .about-content p {
+            margin-bottom: var(--space-16);
+        }
+
+        /* Experience & Education */
+        .timeline {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            background: var(--color-surface);
+            border: 1px solid var(--color-card-border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-24);
+            margin-bottom: var(--space-24);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .timeline-item:hover {
+            box-shadow: var(--shadow-md);
+            transition: box-shadow 0.2s;
+        }
+
+        .timeline-item h3 {
+            color: var(--color-text);
+            font-size: 20px;
+            margin-bottom: var(--space-8);
+        }
+
+        .timeline-item .organization {
+            color: var(--color-primary);
+            font-weight: 500;
+            margin-bottom: var(--space-8);
+        }
+
+        .timeline-item .duration {
+            color: var(--color-text-secondary);
+            font-size: 14px;
+            margin-bottom: var(--space-12);
+        }
+
+        .timeline-item p {
+            color: var(--color-text-secondary);
+            font-size: 15px;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-24);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .skill-category {
+            background: var(--color-surface);
+            border: 1px solid var(--color-card-border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-24);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .skill-category h3 {
+            color: var(--color-primary);
+            font-size: 18px;
+            margin-bottom: var(--space-16);
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: var(--space-8) 0;
+            color: var(--color-text-secondary);
+            font-size: 14px;
+            border-bottom: 1px solid rgba(var(--color-brown-600-rgb), 0.08);
+        }
+
+        .skill-category li:last-child {
+            border-bottom: none;
+        }
+
+        /* Publications */
+        .publications-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .publication-item {
+            background: var(--color-surface);
+            border: 1px solid var(--color-card-border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-24);
+            margin-bottom: var(--space-20);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .publication-item h3 {
+            color: var(--color-text);
+            font-size: 16px;
+            margin-bottom: var(--space-8);
+            font-weight: 500;
+        }
+
+        .publication-item .venue {
+            color: var(--color-primary);
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        /* Contact */
+        .contact-info {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: var(--space-24);
+            justify-content: center;
+            margin-top: var(--space-32);
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.2s;
+        }
+
+        .contact-links a:hover {
+            color: var(--color-primary-hover);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-surface);
+            border-top: 1px solid var(--color-card-border);
+            padding: var(--space-32) 0;
+            text-align: center;
+            color: var(--color-text-secondary);
+            font-size: 14px;
+        }
+
+        /* Research Interests */
+        .interests-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-12);
+            justify-content: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .interest-tag {
+            background: var(--color-surface);
+            border: 1px solid var(--color-card-border);
+            padding: var(--space-8) var(--space-16);
+            border-radius: 20px;
+            color: var(--color-text);
+            font-size: 14px;
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            background: transparent;
+            border: 1px solid var(--color-border);
+            padding: var(--space-8) var(--space-12);
+            border-radius: var(--radius-base);
+            cursor: pointer;
+            color: var(--color-text);
+            font-size: 18px;
+            transition: all 0.2s;
+        }
+
+        .theme-toggle:hover {
+            background: rgba(var(--color-teal-500-rgb), 0.1);
+        }
+
+        /* Language Selector */
+        .language-selector {
+            position: relative;
+        }
+
+        .language-selector select {
+            background: transparent;
+            border: 1px solid var(--color-border);
+            padding: var(--space-8) var(--space-12);
+            border-radius: var(--radius-base);
+            cursor: pointer;
+            color: var(--color-text);
+            font-size: 14px;
+            appearance: none;
+            padding-right: 30px;
+        }
+
+        .language-selector::after {
+            content: '▼';
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            font-size: 10px;
+            color: var(--color-text);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            background: transparent;
+            border: 1px solid var(--color-border);
+            padding: var(--space-8);
+            border-radius: var(--radius-base);
+            cursor: pointer;
+            color: var(--color-text);
+            font-size: 24px;
+        }
+
+        .nav-controls {
+            display: flex;
+            align-items: center;
+            gap: var(--space-12);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                flex-direction: column;
+                background: var(--color-surface);
+                width: 100%;
+                padding: var(--space-24);
+                border-bottom: 1px solid var(--color-card-border);
+                box-shadow: var(--shadow-md);
+                transition: left 0.3s ease;
+                gap: var(--space-16);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero .subtitle {
+                font-size: 18px;
+            }
+
+            .hero .tagline {
+                font-size: 14px;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            nav {
+                flex-wrap: wrap;
+            }
+
+            .timeline-item h3 {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 var(--space-16);
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero .subtitle {
+                font-size: 16px;
+            }
+
+            .timeline-item {
+                padding: var(--space-16);
+            }
+
+            .skill-category {
+                padding: var(--space-16);
+            }
+
+            .publication-item {
+                padding: var(--space-16);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Himanshi Bakshi</div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-controls">
+                    <div class="language-selector">
+                        <select id="languageSelect" aria-label="Select language">
+                            <option value="en">English</option>
+                            <option value="hi">हिन्दी</option>
+                            <option value="pa">ਪੰਜਾਬੀ</option>
+                            <option value="es">Español</option>
+                            <option value="fr">Français</option>
+                        </select>
+                    </div>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Himanshi Bakshi</h1>
+            <div class="subtitle">Biotechnology Researcher &amp; Cell Biology Scientist</div>
+            <p class="tagline">MSc Human Genomics | Junior Scientist at AAL Biosciences Research | Specializing in Cell-Based Assays, Molecular Biology, and Therapeutic Innovation</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                <a href="#publications" class="btn btn-secondary">View Publications</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>I am a dedicated biotechnology researcher with a Master's degree in Human Genomics from Panjab University. My expertise spans cell and molecular biology, with a particular focus on cancer biology, human genetics, and therapeutic innovation.</p>
+                <p>Currently serving as a Junior Scientist and Business Development Executive at AAL Biosciences Research Pvt Ltd, I bridge the gap between cutting-edge science and strategic business development. My work involves executing cell-based in vitro assays, molecular techniques, and data analysis to support R&amp;D and safety studies across biotech, pharma, and cosmetic industries.</p>
+                <p>With hands-on experience from prestigious institutions including CSIR-IMTech, PGIMER, and Max Super Specialty Hospital, I bring a comprehensive understanding of both research excellence and clinical applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="research-interests">
+        <div class="container">
+            <h2 class="section-title">Research Interests</h2>
+            <div class="interests-grid">
+                <span class="interest-tag">Cancer Biology</span>
+                <span class="interest-tag">Human Genetics</span>
+                <span class="interest-tag">Immunology</span>
+                <span class="interest-tag">Proteomics</span>
+                <span class="interest-tag">Epigenetics</span>
+                <span class="interest-tag">CRISPR Gene Editing</span>
+                <span class="interest-tag">Cardiovascular Medicine</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Junior Scientist &amp; Business Development Executive</h3>
+                    <div class="organization">AAL Biosciences Research Pvt Ltd, Panchkula, Haryana</div>
+                    <div class="duration">April 2024 - Present</div>
+                    <p>Executing cell-based in vitro assays, molecular techniques, and data analysis to support R&amp;D and safety studies. Bridging science and strategy by identifying client needs, promoting testing services, and driving collaborations in biotech, pharma, and cosmetic industries.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Technical Associate: Diagnostics R&amp;D</h3>
+                    <div class="organization">Convergys Healthcare Pvt. Ltd. (Unit of Convergent Technologies, Germany)</div>
+                    <div class="duration">September 2024 - March 2025</div>
+                    <p>Techno-commercial role involving international business management, instrumentation technical support, scientific blog writing, and innovation in molecular diagnostics segment.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Project Associate</h3>
+                    <div class="organization">CSIR-IMTech, Chandigarh</div>
+                    <div class="duration">August 2023 - August 2024</div>
+                    <p>Under Chief Scientist Dr. Karthikeyan Subramanian. Government-funded research on identification, characterization and validation of inhibitors specific to bifunctional GTP cyclohydrolase II/3,4-Dihydroxy-2-butanone-4-phosphate synthase of Mycobacterium tuberculosis.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Research Trainee</h3>
+                    <div class="organization">Max Super Specialty Hospital, Mohali</div>
+                    <div class="duration">June 2023 - July 2023</div>
+                    <p>Under Dr. Deepak Puri, Senior Director - CTVS Unit. Learned research planning, proposal writing, grant writing, clinical research parameters and ethical considerations. Developed research plan for cardiovascular disease prevention in North India.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>MSc Human Genomics</h3>
+                    <div class="organization">Panjab University, Chandigarh, India</div>
+                    <div class="duration">2021 - 2023 | 77.2%</div>
+                    <p>Master's research project: Elicitation of anticancer secondary metabolites in Pyxidicoccus sp. S252 under Dr. Ramandeep Kaur. Focused on induction of biosynthetic gene clusters for secondary metabolite production and assessment of anticancer potential on Human Colon Cancer (HCT116) cell line.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>BSc (Hons) Biotechnology</h3>
+                    <div class="organization">GGDSD College, Chandigarh, India</div>
+                    <div class="duration">2018 - 2021 | 82.6%</div>
+                    <p>Comprehensive undergraduate program in biotechnology with emphasis on molecular biology, genetics, and bioprocessing.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Clinical Training</h3>
+                    <div class="organization">PGIMER, Chandigarh, India</div>
+                    <div class="duration">January - March 2023</div>
+                    <p>Research training in Department of Hematology, Advanced Pediatric Centre, and Central Sophisticated Instrument Cell. Studied case histories of children with genetic disorders and gained hands-on experience with clinical research instruments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Cell Culture &amp; Assays</h3>
+                    <ul>
+                        <li>Cell line maintenance and passaging</li>
+                        <li>Cytotoxicity assays (MTT, SRB)</li>
+                        <li>Cancer cell culture handling</li>
+                        <li>Primary cell culture techniques</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Molecular Biology</h3>
+                    <ul>
+                        <li>DNA/RNA/Protein isolation</li>
+                        <li>PCR, qRT-PCR, RAPD, RFLP</li>
+                        <li>Molecular cloning techniques</li>
+                        <li>Site-directed mutagenesis</li>
+                        <li>CRISPR/Cas9 systems</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Protein Analysis</h3>
+                    <ul>
+                        <li>Native-PAGE &amp; SDS-PAGE</li>
+                        <li>Western Blotting</li>
+                        <li>Chromatography techniques</li>
+                        <li>Protein expression analysis</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Advanced Techniques</h3>
+                    <ul>
+                        <li>X-ray Crystallography</li>
+                        <li>Isothermal titration calorimetry</li>
+                        <li>Dynamic Light Scattering</li>
+                        <li>Circular dichroism</li>
+                        <li>Sanger sequencing</li>
+                        <li>Fluorescence in situ hybridization</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Bioinformatics</h3>
+                    <ul>
+                        <li>Database exploration &amp; analysis</li>
+                        <li>In-silico DNA/RNA studies</li>
+                        <li>Protein structure modeling</li>
+                        <li>3D visualization tools</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Research &amp; Management</h3>
+                    <ul>
+                        <li>Research proposal writing</li>
+                        <li>Grant writing</li>
+                        <li>Data analysis &amp; handling</li>
+                        <li>Event management</li>
+                        <li>Scientific communication</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="publications">
+        <div class="container">
+            <h2 class="section-title">Publications &amp; Presentations</h2>
+            <div class="publications-list">
+                <div class="publication-item">
+                    <h3>"A Therapeutic Perspective on Epidrugs in Cardiovascular Diseases: Insights on Epigenetic Regulatory Mechanisms, Challenges and Promises"</h3>
+                    <div class="venue">Oral Presentation at Cardiomersion 2024 Annual Global Conference</div>
+                </div>
+
+                <div class="publication-item">
+                    <h3>"Emerging Trends in Regenerative Cardiovascular Medicine"</h3>
+                    <div class="venue">Oral Presentation at International Heart Congress, Tokyo, Japan</div>
+                </div>
+
+                <div class="publication-item">
+                    <h3>"Augmented Reality Microscope: Integration of Digital Innovation in Routine Cancer Diagnosis"</h3>
+                    <div class="venue">Poster Presentation at CHASCON, Department of Biotechnology, Panjab University</div>
+                </div>
+
+                <div class="publication-item">
+                    <h3>"Multiplex CRISPR-Cas9 Gene Editing for Treatment of Refractory Cancer"</h3>
+                    <div class="venue">Poster Presentation at National Conference on CRISPR/Cas: From Biology to Technology (IBAB &amp; SRM University)</div>
+                </div>
+
+                <div class="publication-item">
+                    <h3>"Biofuels: A Prospective Renewable Energy Source"</h3>
+                    <div class="venue">Research Paper published in RESEARCH JOURNEY - International E-Research Journal</div>
+                </div>
+
+                <div class="publication-item">
+                    <h3>"Biological markers in medicine"</h3>
+                    <div class="venue">Article published in The Torch Magazine by BioLim Centre for Science and Technology, Chennai</div>
+                </div>
+
+                <div class="publication-item">
+                    <h3>"Bioplastic Production in Microalgae"</h3>
+                    <div class="venue">Poster Presentation under DBT 'Star College Scheme' in collaboration with Association of Microbiologist of India (AMI)</div>
+                </div>
+
+                <div class="publication-item">
+                    <h3>"Role of Genetically Modified Crops in Sustainable Agriculture"</h3>
+                    <div class="venue">Paper Presentation at International Conference 'Roadmap to Sustainability: Environment and Health', SGGS College, Chandigarh</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-info">
+                <p style="color: var(--color-text-secondary); margin-bottom: var(--space-24);">I'm always interested in collaborative research opportunities, business partnerships, and discussions about biotechnology innovation.</p>
+                <div class="contact-links">
+                    <a href="tel:+919501231411">📞 +91 9501231411</a>
+                    <a href="mailto:himanshibakshi@protonmail.com">✉️ himanshibakshi@protonmail.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Himanshi Bakshi. All rights reserved.</p>
+            <p style="margin-top: var(--space-8);">Biotechnology Researcher | Cell &amp; Molecular Biology Scientist | Business Development</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu after clicking
+                    document.querySelector('.nav-links').classList.remove('active');
+                }
+            });
+        });
+
+        // Add active state to navigation on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.style.color = '';
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.style.color = 'var(--color-primary)';
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinksMenu = document.querySelector('.nav-links');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            navLinksMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('nav')) {
+                navLinksMenu.classList.remove('active');
+            }
+        });
+
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to system preference
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (savedTheme) {
+            html.setAttribute('data-color-scheme', savedTheme);
+            themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+        } else if (systemPrefersDark) {
+            html.setAttribute('data-color-scheme', 'dark');
+            themeToggle.textContent = '☀️';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-color-scheme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            html.setAttribute('data-color-scheme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+        });
+
+        // Language Translation
+        const languageSelect = document.getElementById('languageSelect');
+        
+        const translations = {
+            en: {
+                about: 'About',
+                experience: 'Experience',
+                education: 'Education',
+                skills: 'Skills',
+                publications: 'Publications',
+                contact: 'Contact',
+                getInTouch: 'Get in Touch',
+                viewPublications: 'View Publications',
+                aboutMe: 'About Me',
+                researchInterests: 'Research Interests',
+                professionalExperience: 'Professional Experience',
+                technicalSkills: 'Technical Skills',
+                publicationsTitle: 'Publications & Presentations',
+                contactTitle: 'Get in Touch',
+                contactMessage: "I'm always interested in collaborative research opportunities, business partnerships, and discussions about biotechnology innovation.",
+                rightsReserved: 'All rights reserved.',
+                tagline: 'Biotechnology Researcher | Cell & Molecular Biology Scientist | Business Development'
+            },
+            hi: {
+                about: 'परिचय',
+                experience: 'अनुभव',
+                education: 'शिक्षा',
+                skills: 'कौशल',
+                publications: 'प्रकाशन',
+                contact: 'संपर्क',
+                getInTouch: 'संपर्क करें',
+                viewPublications: 'प्रकाशन देखें',
+                aboutMe: 'मेरे बारे में',
+                researchInterests: 'अनुसंधान रुचियाँ',
+                professionalExperience: 'व्यावसायिक अनुभव',
+                technicalSkills: 'तकनीकी कौशल',
+                publicationsTitle: 'प्रकाशन और प्रस्तुतियाँ',
+                contactTitle: 'संपर्क करें',
+                contactMessage: 'मैं सहयोगी अनुसंधान अवसरों, व्यावसायिक साझेदारी और जैव प्रौद्योगिकी नवाचार पर चर्चा में हमेशा रुचि रखती हूँ।',
+                rightsReserved: 'सर्वाधिकार सुरक्षित।',
+                tagline: 'जैव प्रौद्योगिकी शोधकर्ता | कोशिका और आणविक जीव विज्ञान वैज्ञानिक | व्यवसाय विकास'
+            },
+            pa: {
+                about: 'ਜਾਣਕਾਰੀ',
+                experience: 'ਤਜਰਬਾ',
+                education: 'ਸਿੱਖਿਆ',
+                skills: 'ਹੁਨਰ',
+                publications: 'ਪ੍ਰਕਾਸ਼ਨ',
+                contact: 'ਸੰਪਰਕ',
+                getInTouch: 'ਸੰਪਰਕ ਕਰੋ',
+                viewPublications: 'ਪ੍ਰਕਾਸ਼ਨ ਦੇਖੋ',
+                aboutMe: 'ਮੇਰੇ ਬਾਰੇ',
+                researchInterests: 'ਖੋਜ ਰੁਚੀਆਂ',
+                professionalExperience: 'ਪੇਸ਼ੇਵਰ ਤਜਰਬਾ',
+                technicalSkills: 'ਤਕਨੀਕੀ ਹੁਨਰ',
+                publicationsTitle: 'ਪ੍ਰਕਾਸ਼ਨ ਅਤੇ ਪੇਸ਼ਕਾਰੀਆਂ',
+                contactTitle: 'ਸੰਪਰਕ ਕਰੋ',
+                contactMessage: 'ਮੈਂ ਸਹਿਯੋਗੀ ਖੋਜ ਮੌਕਿਆਂ, ਵਪਾਰਕ ਸਾਂਝੇਦਾਰੀ ਅਤੇ ਬਾਇਓਟੈਕਨਾਲੋਜੀ ਨਵੀਨਤਾ ਬਾਰੇ ਚਰਚਾਵਾਂ ਵਿੱਚ ਹਮੇਸ਼ਾ ਦਿਲਚਸਪੀ ਰੱਖਦੀ ਹਾਂ।',
+                rightsReserved: 'ਸਾਰੇ ਅਧਿਕਾਰ ਸੁਰੱਖਿਅਤ।',
+                tagline: 'ਬਾਇਓਟੈਕਨਾਲੋਜੀ ਖੋਜਕਾਰ | ਸੈੱਲ ਅਤੇ ਅਣੂ ਜੀਵ ਵਿਗਿਆਨ ਵਿਗਿਆਨੀ | ਕਾਰੋਬਾਰ ਵਿਕਾਸ'
+            },
+            es: {
+                about: 'Acerca de',
+                experience: 'Experiencia',
+                education: 'Educación',
+                skills: 'Habilidades',
+                publications: 'Publicaciones',
+                contact: 'Contacto',
+                getInTouch: 'Contactar',
+                viewPublications: 'Ver Publicaciones',
+                aboutMe: 'Sobre Mí',
+                researchInterests: 'Intereses de Investigación',
+                professionalExperience: 'Experiencia Profesional',
+                technicalSkills: 'Habilidades Técnicas',
+                publicationsTitle: 'Publicaciones y Presentaciones',
+                contactTitle: 'Contactar',
+                contactMessage: 'Siempre estoy interesada en oportunidades de investigación colaborativa, asociaciones comerciales y discusiones sobre innovación biotecnológica.',
+                rightsReserved: 'Todos los derechos reservados.',
+                tagline: 'Investigadora en Biotecnología | Científica en Biología Celular y Molecular | Desarrollo de Negocios'
+            },
+            fr: {
+                about: 'À propos',
+                experience: 'Expérience',
+                education: 'Éducation',
+                skills: 'Compétences',
+                publications: 'Publications',
+                contact: 'Contact',
+                getInTouch: 'Contactez-moi',
+                viewPublications: 'Voir les Publications',
+                aboutMe: 'À Propos de Moi',
+                researchInterests: 'Intérêts de Recherche',
+                professionalExperience: 'Expérience Professionnelle',
+                technicalSkills: 'Compétences Techniques',
+                publicationsTitle: 'Publications et Présentations',
+                contactTitle: 'Contactez-moi',
+                contactMessage: 'Je suis toujours intéressée par les opportunités de recherche collaborative, les partenariats commerciaux et les discussions sur l\'innovation biotechnologique.',
+                rightsReserved: 'Tous droits réservés.',
+                tagline: 'Chercheuse en Biotechnologie | Scientifique en Biologie Cellulaire et Moléculaire | Développement Commercial'
+            }
+        };
+
+        languageSelect.addEventListener('change', (e) => {
+            const lang = e.target.value;
+            const t = translations[lang];
+            
+            // Update navigation
+            document.querySelectorAll('.nav-links a').forEach((link, index) => {
+                const keys = ['about', 'experience', 'education', 'skills', 'publications', 'contact'];
+                link.textContent = t[keys[index]];
+            });
+
+            // Update CTA buttons
+            const ctaButtons = document.querySelectorAll('.cta-buttons a');
+            if (ctaButtons[0]) ctaButtons[0].textContent = t.getInTouch;
+            if (ctaButtons[1]) ctaButtons[1].textContent = t.viewPublications;
+
+            // Update section titles
+            const sectionTitles = document.querySelectorAll('.section-title');
+            const titleKeys = ['aboutMe', 'researchInterests', 'professionalExperience', 'education', 'technicalSkills', 'publicationsTitle', 'contactTitle'];
+            sectionTitles.forEach((title, index) => {
+                if (titleKeys[index]) title.textContent = t[titleKeys[index]];
+            });
+
+            // Update footer
+            const footerP = document.querySelectorAll('footer p');
+            if (footerP[0]) footerP[0].innerHTML = `&copy; 2025 Himanshi Bakshi. ${t.rightsReserved}`;
+            if (footerP[1]) footerP[1].textContent = t.tagline;
+
+            // Update contact message
+            const contactMessage = document.querySelector('.contact-info p');
+            if (contactMessage) contactMessage.textContent = t.contactMessage;
+        });
+    </script>
+</body>
+</html>
